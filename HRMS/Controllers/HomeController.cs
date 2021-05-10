@@ -29,6 +29,7 @@ namespace HRMS.Controllers
 
         public IActionResult Index()
         {
+            
             if (Check_login() == true)
             {
                 return View();
@@ -44,8 +45,8 @@ namespace HRMS.Controllers
 
         private bool Check_login() {
             bool result = false;
-            if (HttpContext.Session.GetString("login") != null) {
-                if (HttpContext.Session.GetString("login") == "1") {
+            if (HttpContext.Session.GetString("Login") != null) {
+                if (HttpContext.Session.GetString("Login") == "1") {
                     result = true;
                 }
             }
@@ -55,7 +56,7 @@ namespace HRMS.Controllers
         [HttpPost]
         public IActionResult Login(String u_name, String u_pass) {
             //string text;
-            DataTable dt = conDB.Getdata($"Select * from `User` where u_name = '{u_name}';");
+            DataTable dt = conDB.Getdata($"Select * from `lkm_user` where u_name = '{u_name}';");
             if (dt.Rows.Count > 0) {
                 if (dt.Rows[0]["u_pass"].ToString() == EncodeString.MD5HashCyptography(u_pass)) {
                     HttpContext.Session.SetString("Login", "1");

@@ -1,6 +1,215 @@
 ﻿@{
     ViewData["Title"] = "บันทึกรายงานอุบัติการณ์ความเสี่ยง";
 }
+
 <div class="text-center">
     <h3>บันทึกรายงานอุบัติการณ์ความเสี่ยง</h3>
 </div>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-md-7 col-lg-8">
+        <form class="needs-validation" novalidate="">
+            <div class="row g-3">
+                <div class="col-sm-10">
+                    <label for="firstName" class="form-label">หน่วยงานที่รายงาน</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <label for="lastName" class="form-label">ประเภทสถานที่</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-sm-6"></div>
+                <div class="col-12">
+                    <label for="country" class="form-label">ชนิดสถานที่</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <label for="lastName" class="form-label">เป็นอุบัติการร์ความเสี่ยงในเรื่องใด</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <label for="lastName" class="form-label">อุบัติการณ์ความเสี่ยงย่อย</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+
+                </div>
+
+                <div class="col-12">
+                    <label for="address" class="form-label">สรุปประเด็นปัญหา</label>
+                    <p class="font-weight-light">*บันทึกตามรูปแบบเพื่อบอกให้ทราบว่า เกิดอะไร อย่างไร (Freetext)ไม่เกิน 3 บรรทัด</p>
+                    @*<input type="text" class="form-control" id="txtbox" placeholder="1234 Main St" required="">*@
+                    <textarea rows="3" cols="20" class="form-control" placeholder="" required=""></textarea>
+                    <div class="invalid-feedback">
+                        Please enter your shipping address.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="country" class="form-label">ระดับความรุนแรง</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                </div>
+                <div class="col-sm-4">
+                    <label for="lastName" class="form-label">ผู้ได้รับผลกระทบ</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="country" class="form-label">เพศ</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <label for="lastName" class="form-label">อายุ</label>
+                    <input type="number" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="font-weight-light">(เศษของปีน้อยกว่า 6 เดือนให้นับเป็น 0 ตั้งแต่ 6 เดือนขึ้นไปนับเป็น 1 ปี)</p>
+                </div>
+
+                <div class="col-sm-5">
+                    <label for="lastName" class="form-label">วันที่เกิดอุบัติการณ์ความเสี่ยง</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5">
+                    <label for="lastName" class="form-label">วันที่ค้นพบ</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">ช่วงเวลาที่เกิดอุบัติการความเสี่ยง</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <p class="font-weight-light">*หรือ</p>
+                </div>
+                <div class="col-sm-2">
+                    <label for="lastName" class="form-label">ชั่วโมง</label>
+                    <input type="number" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <label for="lastName" class="form-label">นาที</label>
+                    <input type="number" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <p class="font-weight-light">เช่น 20.58 </p>
+                </div>
+                <div class="col-md-4">
+                    <label for="lastName" class="form-label">แหล่งที่มา / วิธีการค้นพบ</label>
+                    <select class="form-select" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="zip" class="form-label">รายละเอียดการเกิดเหตุ</label>
+                    <textarea rows="3" cols="20" class="form-control" placeholder="" required=""></textarea>
+                    <div class="invalid-feedback">
+                        Zip code required.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <p class="text-primary">เอกสารประกอบ</p>
+                    <input type="file" class="form-control-file" name="file" id="file" />
+                </div>
+                <div class="col-md-12">
+                    <label for="zip" class="form-label">การจัดการเบื้องต้น</label>
+                    <textarea rows="3" cols="20" class="form-control" placeholder="" required=""></textarea>
+                    <div class="invalid-feedback">
+                        Zip code required.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <p class="text-primary">เอกสารประกอบ</p>
+                    <input type="file" class="form-control-file" name="file" id="file" />
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="col-md-12">
+                <div class="h-100 p-5 bg-light border rounded-2">
+                    <p class="text-danger"> * หมายถึง ข้อมูลที่บังคับกรอก</p>
+                    <p class="text-danger">
+                        ** หมายถึง ขัอมูลตาม Standard Data Set & Terminologies ที่ต้องส่งข้อมูลเข้าสู่ระบบ NRLS
+                        [การแนบเอกสารประกอบสามารถแนบได้มากกว่า 1 ไฟล์ในแต่ละหัวข้อ แต่ขนาดของไฟล์รวมกันทั้งหมดต้องไม่เกิน 10 MB. ในแต่ละขั้นตอนรายงาน
+                        ยืนยัน แก้ไขระดับหัวหน้า จนถึงการแก้ไขในระดับกรรมการ]
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-12 text-center">
+                <button class="w-15 btn btn-primary" type="submit">บันทึก</button>
+                <a class="w-15 btn btn-outline-secondary">ยกเลิก</a>
+            </div>
+        </form>
+    </div>
+</div>
+<br><br><br>

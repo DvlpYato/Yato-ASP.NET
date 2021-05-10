@@ -15,31 +15,36 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HRMS</a>
+                <a class="navbar-brand" asp-area="" asp-controller="" asp-action="">HRMS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    @if (Context.Session.GetString("Login") == "1") {
+                    @*@if (Context.Session.GetString("Login") == "1") {*@
                     <ul class="navbar-nav flex-grow-1">
                         @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-        </li>*@
-                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>*@
+                        @*<li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">หน้าแรก</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">บันทึกข้อมลู</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="InputData">บันทึกรายงานอุบัติการณ์ความเสี่ยง</a></li>
-                            </ul>
-                        </li>
-                        
+                        <div class="dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">บันทึกข้อมูล</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="InputData">รายงานอุบัติการณ์ความเสี่ยง</a>
+                                </button>
+                                
+                            </div>
+                        </div>
                         <li class="nav-item">
                             @if (Context.Session.GetString("username") != null)
                             {
-                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">@Context.Session.GetString("username").ToString()</a>
+                                <a class="nav-link text-dark">@Context.Session.GetString("username").ToString()</a>
                             }
 
                         </li>
@@ -51,7 +56,7 @@
 
                         </li>
                     </ul>
-                    }
+                    @*}*@
                 </div>
             </div>
         </nav>
